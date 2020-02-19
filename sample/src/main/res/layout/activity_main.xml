@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/toolbar_line"
-        app:pageDirection="rtl"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        app:pageDirection="rtl" />
 
     <View
         android:id="@+id/toolbar_line"
@@ -18,6 +18,13 @@
         android:layout_height="1dp"
         android:layout_above="@+id/toolbar_scrollview"
         android:background="#cccccc" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="save" />
 
     <HorizontalScrollView
         android:id="@+id/toolbar_scrollview"

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.jaredrummler.android.colorpicker.ColorPickerDialog;
 import com.jaredrummler.android.colorpicker.ColorPickerDialogListener;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
         setContentView(R.layout.activity_main);
 
         editor = findViewById(R.id.editor_view);
+        Button btnSave = findViewById(R.id.btnSave);
         // Enable keyboard's incognito mode
         editor.setIncognitoModeEnabled(true);
 
@@ -95,6 +97,13 @@ public class MainActivity extends AppCompatActivity implements ColorPickerDialog
                 InsertLinkDialogFragment dialog = InsertLinkDialogFragment.newInstance();
                 dialog.setOnInsertClickListener(onInsertLinkClickListener);
                 dialog.show(getSupportFragmentManager(), "insert-link-dialog");
+            }
+        });
+
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("HTML_EDITOR", editor.getHtml());
             }
         });
     }
