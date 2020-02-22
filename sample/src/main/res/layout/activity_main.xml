@@ -19,12 +19,6 @@
         android:layout_above="@+id/toolbar_scrollview"
         android:background="#cccccc" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="save" />
 
     <HorizontalScrollView
         android:id="@+id/toolbar_scrollview"

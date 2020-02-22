@@ -1,6 +1,14 @@
 RTextEditorView
 ======
-[![Android Arsenal][android-arsenal-svg]][android-arsenal] [![JitPack][jitpackbadge-svg]][jitpackbadge] [![License: MIT][mitbadge-svg]][mitbadge]
+[![JitPack][jitpackbadge-svg]][jitpackbadge] [![License: MIT][mitbadge-svg]][mitbadge]
+
+Note
+------
+This library is exactly <a href="https://github.com/jkennethcarino/rtexteditorview"> RTextEditorView </a> with two differences:
+1. It supports RTL & LTR pages
+2. It does not use bootstrap
+
+It seems the original library does not maintain anymore so I've created this library to add new features like supporting RTL pages
 
 A simple WYSIWYG Editor for Android based on [Summernote][summernote].
 
@@ -44,6 +52,7 @@ Features
 - [x] Remove Link
 - [x] Get/Set HTML
 - [x] Undo/Redo changes
+- [x] RTL pages
 
 Download
 ------
@@ -80,12 +89,13 @@ Usage
 
 ```xml
 <!-- Set up the main editor -->
-<com.jkcarino.rtexteditorview.RTextEditorView
-    android:id="@+id/editor_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_above="@+id/toolbar_line"
-    android:layout_alignParentTop="true" />
+<ir.appturi.rtexteditorview.RTextEditorView
+        android:id="@+id/editor_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toolbar_line"
+        android:layout_alignParentTop="true"
+        app:pageDirection="rtl" />
 
 <!-- Set up the toolbar -->
 <com.jkcarino.rtexteditorview.RTextEditorToolbar
@@ -94,7 +104,7 @@ Usage
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <com.jkcarino.rtexteditorview.RTextEditorButton
+     <ir.appturi.rtexteditorview.RTextEditorToolbar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?android:attr/selectableItemBackground"
@@ -102,14 +112,26 @@ Usage
         app:srcCompat="@drawable/ic_format_bold"
         app:toolType="bold" />
 
-    <com.jkcarino.rtexteditorview.RTextEditorButton
+    <ir.appturi.rtexteditorview.RTextEditorButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?android:attr/selectableItemBackground"
         android:padding="@dimen/toolbar_item_padding"
         app:srcCompat="@drawable/ic_format_italic"
         app:toolType="italic" />
-</com.jkcarino.rtexteditorview.RTextEditorToolbar>
+</ir.appturi.rtexteditorview.RTextEditorToolbar>
+```
+
+**RTL pages:**
+For RTL pages just add pageDirection="rtl" property to the RTextEditorView in your xml
+```
+<ir.appturi.rtexteditorview.RTextEditorView
+        android:id="@+id/editor_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toolbar_line"
+        android:layout_alignParentTop="true"
+        app:pageDirection="rtl" />
 ```
 
 **Java usage:**
