@@ -15,7 +15,7 @@ import ir.appturi.rtexteditorview.RTextEditorButton;
 import ir.appturi.rtexteditorview.RTextEditorToolbar;
 import ir.appturi.rtexteditorview.RTextEditorView;
 
-import com.jkcarino.rtexteditorview.sample.R;
+import ir.appturi.rtexteditorview.sample.R;
 
 public class MainActivity extends AppCompatActivity implements ColorPickerDialogListener {
 

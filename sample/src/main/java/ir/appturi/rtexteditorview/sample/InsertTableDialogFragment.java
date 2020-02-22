@@ -6,7 +6,6 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import com.google.android.material.textfield.TextInputEditText;
-import com.jkcarino.rtexteditorview.sample.R;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.appcompat.app.AlertDialog;

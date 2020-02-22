@@ -22,7 +22,6 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.jkcarino.rtexteditorview.R;
 
 public class RTextEditorView extends WebView {
 
