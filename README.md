@@ -98,7 +98,7 @@ Usage
         app:pageDirection="rtl" />
 
 <!-- Set up the toolbar -->
-<com.jkcarino.rtexteditorview.RTextEditorToolbar
+<ir.appturi.rtexteditorview.RTextEditorToolbar
     android:id="@+id/editor_toolbar"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
