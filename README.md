@@ -1,4 +1,3 @@
-RTextEditorView
 
 Note
 ------
@@ -36,5 +35,3 @@ For RTL pages just add pageDirection="rtl" property to the RTextEditorView in yo
         android:layout_alignParentTop="true"
         app:pageDirection="rtl" />
 ```
-
-**Java usage:**
