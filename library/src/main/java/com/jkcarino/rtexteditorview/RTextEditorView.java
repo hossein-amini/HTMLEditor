@@ -6,11 +6,11 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Build;
-import android.support.annotation.ColorInt;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v13.view.inputmethod.EditorInfoCompat;
+import androidx.annotation.ColorInt;
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.view.inputmethod.EditorInfoCompat;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -21,8 +21,6 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import static android.util.LayoutDirection.LTR;
 
 public class RTextEditorView extends WebView {
 
