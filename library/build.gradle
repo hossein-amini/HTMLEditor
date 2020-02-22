@@ -1,4 +1,27 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+
+ext {
+    bintrayRepo = 'RichHTMLEditor' // your repo name
+    bintrayName = 'ir.appturi.rtexteditorview' // has to be same as your library module name
+    libraryName = 'library'
+
+    publishedGroupId = 'ir.appturi.rtexteditorview' // your module package name
+    artifact = 'rtexteditorview' // has to be same as your library module name
+    libraryVersion = '1.0.0'
+
+    libraryDescription = 'Android HTML editor'
+    siteUrl = 'https://github.com/hossein-amini/HTMLEditor'
+    gitUrl = 'https://github.com/hossein-amini/HTMLEditor.git'
+
+    developerId = "hosseinAminii"
+    developerName = "Hossein Amini"
+    developerEmail = 'hosseinamiinii@gmail.com'
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 29
@@ -31,3 +54,6 @@ dependencies {
     implementation 'androidx.annotation:annotation:1.1.0'
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/installv.gradle'
+apply from: 'https://raw.githubusercontent.com/numetriclabz/jcenter/master/bintrayv.gradle'
